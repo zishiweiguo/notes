@@ -1,0 +1,58 @@
+把当前目录变成git仓库
+git init
+
+查看XX文件修改了那些内容
+git diff  XX
+
+git 上下载文件到指定目录下：
+执行  git clone git@ip:/server/gitrepo/xx.git
+
+本地仓库添加文件
+git add xx.txt
+
+将本地仓库文件提交
+git commit -m "desc"
+
+推送
+git push origin master
+
+查看文件内容
+cat xx.txt
+
+查看分支
+git branch
+
+创建并切换分支
+git checkout -b xx
+
+当前分支合并某分支
+git merge branchName
+
+查看状态
+git status
+
+查看操作日志
+git log
+
+
+本地工程上传到github上
+github
+1.注册github
+2.登录github，找到New Repository点击进入,填写项目名称、说明和网址后就可以创建了。类似git@github.com:xxx/xxx.get的地址就是这个项目的地址了。
+
+本地
+1.安装git软件
+2.安装完成后选择git bash进入命令行，初始设置git
+1） git config --global user.name "your real name"
+2)   git onfig --global user.email you@email.address
+3.生成SSH密钥来认证
+ ssh -keygen -C 'your@email.address' -t rsa  回车直接使用默认路径。再输入想要的密码，SSH key就生成了
+4.将生成的KEY提交到github
+找到路径下的id_rsa.pub,打开并复制内容到github的settings里，该页面上有个deploy keys，选择add deploy key，将复制内容添加进去并提交
+5.创建git本地仓库 ,进入一个文件夹执行 git init，将该文件夹作为本地仓库
+6.选择添加到本地仓库的文件   git add filename  如果需要将文件夹下的所有内容都添加进去可以使用 git add 文件夹mane.  注意"."符号 表示文件夹里面的所有内容
+7.将选择好的文件添加进本地仓库 git commit -m "msg"  ,-m "msg" 表示对本次提交的说明信息
+8.本地仓库上传到github
+1） git remote add origin git@github.com:xxx/xxx.git  (如果没有建立远程地址)
+2） git push -u origin master    (推送到主分支上)
+
