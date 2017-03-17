@@ -1,0 +1,46 @@
+spring.code包目录
+annotation  注解类文件夹
+convert     转换
+enums 枚举类
+env spring环境类
+io  流
+serializer 序列化
+style 风格
+task 任务
+type 类型
+AliasRegistry.java
+AttributeAccessor.java
+AttributeAccessorSupport.java
+BridgeMethodResolver.java
+CollectionFactory.java
+ConfigurableObjectInputStream.java
+ConstantException.java
+Constants.java
+ControlFlow.java
+ControlFlowFactory.java
+Conventions.java
+DecoratingClassLoader.java
+ErrorCoded.java
+ExceptionDepthComparator.java
+GenericCollectionTypeResolver.java
+GenericTypeResolver.java
+InfrastructureProxy.java
+JdkVersion.java    获取jdk版本号
+LocalVariableTableParameterNameDiscoverer.java
+MethodParameter.java
+NamedInheritableThreadLocal.java
+NamedThreadLocal.java
+NestedCheckedException.java
+NestedExceptionUtils.java
+NestedIOException.java
+NestedRuntimeException.java
+OrderComparator.java
+Ordered.java
+OverridingClassLoader.java
+ParameterizedTypeReference.java
+ParameterNameDiscoverer.java
+PrioritizedParameterNameDiscoverer.java
+PriorityOrdered.java
+SimpleAliasRegistry.java
+SmartClassLoader.java
+SpringVersion.java   获取spring版本号
