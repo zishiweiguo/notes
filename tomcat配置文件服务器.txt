@@ -1,0 +1,30 @@
+﻿tomcat 文件服务器配置
+
+
+1.在tomcat 安装目录\webapps\ROOT 下放入文件download.txt ，启动tomcat通过访问localhost(ip):8080(port)/ 可以访问文件
+
+
+2.如果想在任意位置存放文件并通过tomcat访问到需要如下配置：
+
+在tomcat安装目录\conf\Catalina\localhost下建立任意文件名xml文件，比如：download.xml，内容如下：
+
+<?xml version="1.0" encoding="UTF-8"?>    
+<Context  path="/download" docBase="D://download" crossContext="true">    
+</Context> 
+
+修改tomcat配置文件，文件目录\conf\web.xml，要将<param-name>listings</param-name>的value为true。
+
+<servlet>  
+    <servlet-name>default</servlet-name>  
+    <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>  
+    <init-param>  
+        <param-name>debug</param-name>  
+        <param-value>0</param-value>  
+    </init-param>  
+    <init-param>  
+        <param-name>listings</param-name>  
+        <!-- 设置可以访问虚拟目录 default false -->  
+        <param-value>true</param-value>  
+    </init-param>  
+    <load-on-startup>1</load-on-startup>  
+</servlet>  
